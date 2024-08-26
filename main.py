@@ -4,9 +4,9 @@ from fastapi.responses import JSONResponse
 from sqlalchemy.orm import Session
 from sqlalchemy.exc import IntegrityError
 
-from senao import models, crud
-from senao.database import engine, get_database
-from senao.schemas import AccountCreation, AccountValidation, Response
+from . import models, crud
+from .database import engine, get_database
+from .schemas import AccountCreation, AccountValidation, Response
 
 
 models.Base.metadata.create_all(bind=engine)

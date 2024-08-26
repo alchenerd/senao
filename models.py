@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, String, TIMESTAMP
 
-from senao.database import Base
+from .database import Base
 
 
 class Account(Base):

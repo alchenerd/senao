@@ -1,0 +1,33 @@
+# Build Docker Image
+```
+docker build -t senao-app .
+```
+
+# Run Docker Image
+```
+docker run -p 8000:8000 --env-file .env -v ./data:/app/data senao-app:latest
+```
+
+# Test Account Creation
+```
+curl -X 'POST' \
+'http://localhost:8000/accounts/' \
+-H 'accept: application/json' \
+-H 'Content-type: application/json' \
+-d '{
+"username": "root",
+"password": "Password123"
+}'
+```
+
+# Test Account Validation
+```
+curl -X 'POST' \
+'http://localhost:8000/accounts/validate/' \
+-H 'accept: application/json' \
+-H 'Content-type: application/json' \
+-d '{
+"username": "root",
+"password": "Password123"
+}'
+```

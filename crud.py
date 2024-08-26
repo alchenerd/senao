@@ -3,7 +3,7 @@ from fastapi import status
 from fastapi.exceptions import RequestValidationError, HTTPException
 from sqlalchemy.orm import Session
 from datetime import datetime, timedelta
-from senao import models, schemas
+from . import models, schemas
 
 
 def create_account(db: Session, user: schemas.AccountCreation) -> models.Account:
