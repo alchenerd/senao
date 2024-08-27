@@ -97,7 +97,7 @@ curl -X 'POST' \
 }'
 ```
 
-### Sample Replies
+### Sample Reply
 
 #### 200 OK
 ```
