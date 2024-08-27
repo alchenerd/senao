@@ -32,7 +32,7 @@ After starting the container, visit http://localhost:8000/docs to verify.
 
 Creates an account.
 
-- endpoint: /accounts/
+- endpoint: /accounts
 - method: POST
 - json payload schema: {"username": str, "password": str}
 
@@ -40,7 +40,7 @@ Creates an account.
 
 ```
 curl -X 'POST' \
-'http://localhost:8000/accounts/' \
+'http://localhost:8000/accounts' \
 -H 'accept: application/json' \
 -H 'Content-type: application/json' \
 -d '{
