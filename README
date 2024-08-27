@@ -10,7 +10,11 @@ docker build -t alchenerd/senao-app .
 
 # Run Docker Image
 ```
-docker run -p 8000:8000 --env-file .env -v ./data:/app/data senao-app
+# With .env file that has `DATABASE_URL`
+docker run -p 8000:8000 --env-file .env -v ./data:/app/data alchenerd/senao-app
+
+# Without .env file; default DB URL is 'sqlite:///./data/senao.db'
+docker run -p 8000:8000 -v ./data:/app/data alchenerd/senao-app
 ```
 
 # Test Account Creation
