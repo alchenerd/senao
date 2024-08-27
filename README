@@ -1,11 +1,16 @@
+# Pull Docker Image
+```
+docker pull alchenerd/senao-app
+```
+
 # Build Docker Image
 ```
-docker build -t senao-app .
+docker build -t alchenerd/senao-app .
 ```
 
 # Run Docker Image
 ```
-docker run -p 8000:8000 --env-file .env -v ./data:/app/data senao-app:latest
+docker run -p 8000:8000 --env-file .env -v ./data:/app/data senao-app
 ```
 
 # Test Account Creation
